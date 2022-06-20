@@ -1,6 +1,7 @@
 import { Model, DataTypes } from "sequelize/types";
+import { Movie } from "./Movie.js";
 
-class Actor extends Model {}
+export class Actor extends Model {}
 Actor.init({
   id: {
     type: DataTypes.INTEGER,
@@ -10,4 +11,10 @@ Actor.init({
   },
   fullName: DataTypes.STRING,
   gender: DataTypes.ENUM("male", "female"),
+});
+Actor.belongsToMany(Movie, {
+  foreignKey: {
+    name: "movieId",
+    allowNull: false,
+  },
 });
