@@ -5,11 +5,11 @@ Teaching while learning
 Create `.env` file in your root directory. Add the following `ENVIRONMENT VARIABLES`.
 ```bash
 DB_NAME=movie_db # database name
-DB_PORT=5432 # database port
+DB_PORT=5432 # database port for DB: postgres
 DB_HOST=localhost # database host
-DB_USER=postgres # database user
-DB_PASSWORD=postgres # database password
-PORT=3030 # server port
+DB_USER= # database user
+DB_PASSWORD= # database password
+PORT= # server port
 
 NODE_ENV=development
 ```
