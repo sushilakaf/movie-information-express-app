@@ -10,6 +10,9 @@ const app = express();
 app.use(express.json()); // json parse
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use('/api', genreRouter);
+app.use('/api', actorRouter);
+
 // listen to the server
 app.listen(process.env.PORT, () => {
   console.log(`Server started at port ${process.env.PORT}`);

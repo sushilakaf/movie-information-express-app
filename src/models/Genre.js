@@ -1,5 +1,6 @@
 import { Model, DataTypes } from "sequelize/types";
 import { Movie } from "./Movie";
+import { sequelize } from "../config/sequelize.js";
 
 export class Genre extends Model {}
 Genre.init({
@@ -10,10 +11,12 @@ Genre.init({
     allowNull: false,
   },
   type: DataTypes.STRING,
-});
-Genre.belongsTo(Movie, {
+}, 
+{sequelize});
+Genre.belongsToMany(Movie, {
   foreignKey: {
     name: "movieId",
     allowNull: false,
   },
+  through: "GenreMovie"
 });
