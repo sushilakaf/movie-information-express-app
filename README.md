@@ -1,6 +1,11 @@
 # Movie information API
 Teaching while learning
 
+## Installations
+```bash
+npm install
+```
+
 ## Configurations
 Create `.env` file in your root directory. Add the following `ENVIRONMENT VARIABLES`.
 ```bash
